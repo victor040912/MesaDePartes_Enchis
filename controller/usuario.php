@@ -6,7 +6,6 @@ require_once("../models/Usuario.php");
 
 /* TODO:Crea una instancia de la clase Usuario */
 $usuario = new Usuario();
-
  /* TODO: Utiliza una estructura switch para determinar la operación a realizar según el valor de $_GET["op"] */
 switch($_GET["op"]){
 

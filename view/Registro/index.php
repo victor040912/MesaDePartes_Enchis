@@ -42,34 +42,34 @@
                                             <h5 class="mb-0">Registrar Cuenta</h5>
                                             <p class="text-muted mt-2">Registre sus datos en el portal.</p>
                                         </div>
-                                        <form class="needs-validation custom-form mt-4 pt-2" novalidate="" action="index.html">
+                                        <form id="mnt_form" class="needs-validation custom-form mt-4 pt-2" novalidate="" action="index.html">
                                             <div class="mb-3">
-                                                <label for="useremail" class="form-label">Correo Electrónico</label>
-                                                <input type="email" class="form-control" id="useremail" placeholder="Enter email" required="">  
+                                                <label for="usu_correo" class="form-label">Correo Electrónico</label>
+                                                <input type="email" class="form-control" id="usu_correo" name="usu_correo" placeholder="Ingrese Correo" required="">  
                                                 <div class="invalid-feedback">
                                                     Ingrese Correo Electrónico
                                                 </div>   
                                             </div>
                     
                                             <div class="mb-3">
-                                                <label for="username" class="form-label">Nombres y Aqpellidos</label>
-                                                <input type="text" class="form-control" id="username" placeholder="Enter username" required="">
+                                                <label for="usu_nomape" class="form-label">Nombres y Aqpellidos</label>
+                                                <input type="text" class="form-control" id="usu_nomape" name="usu_nomape" placeholder="Enter username" required="">
                                                 <div class="invalid-feedback">
                                                     Ingrese Nombres y Aqpellidos
                                                 </div>
                                             </div>
                     
                                             <div class="mb-3">
-                                                <label for="userpassword" class="form-label">Contraseña</label>
-                                                <input type="password" class="form-control" id="userpassword" placeholder="Ingrese Contraseña" required="">
+                                                <label for="usu_pass" class="form-label">Contraseña</label>
+                                                <input type="password" class="form-control" id="usu_pass" name="usu_pass" placeholder="Ingrese Contraseña" required="">
                                                 <div class="invalid-feedback">
                                                     Ingrese Contraseña
                                                 </div>    
                                             </div>
 
                                             <div class="mb-3">
-                                                <label for="userpassword" class="form-label">Confirmar Contraseña</label>
-                                                <input type="password" class="form-control" id="userpassword" placeholder="Ingrese Contraseña" required="">
+                                                <label for="usu_pass_confir" class="form-label">Confirmar Contraseña</label>
+                                                <input type="password" class="form-control" id="usu_pass_confir" name="usu_pass_confir" placeholder="Ingrese Contraseña" required="">
                                                 <div class="invalid-feedback">
                                                     Ingrese Contraseña Nuevamente
                                                 </div>    
