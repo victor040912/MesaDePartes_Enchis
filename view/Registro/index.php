@@ -5,7 +5,7 @@
     <head>
 
         <meta charset="utf-8">
-        <title>Registro | Victor - Mesa de Partes</title>
+        <title>Registro | VIctor- Mesa de Partes</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
         <meta content="Themesbrand" name="author">
@@ -34,78 +34,49 @@
                                 <div class="d-flex flex-column h-100">
                                     <div class="mb-4 mb-md-5 text-center">
                                         <a href="index.html" class="d-block auth-logo">
-                                            <img src="../../assets/picture/Enchis.jpeg" alt="" height="200">
-                                            <h5>
-
-                                            </h5>
-                                            <span class="logo-txt">La Casa de las enchiladas</span>
+                                            <img src="../../assets/picture/EnchisLog.png" alt="" height="200"> <span class="logo-txt"></span>
                                         </a>
                                     </div>
                                     <div class="auth-content my-auto">
                                         <div class="text-center">
                                             <h5 class="mb-0">Registrar Cuenta</h5>
-                                            <p class="text-muted mt-2">Registra tu cuenta ahora.</p>
+                                            <p class="text-muted mt-2">Registre sus datos en el portal.</p>
                                         </div>
                                         <form class="needs-validation custom-form mt-4 pt-2" novalidate="" action="index.html">
                                             <div class="mb-3">
-                                                <label for="useremail" class="form-label">Email</label>
+                                                <label for="useremail" class="form-label">Correo Electrónico</label>
                                                 <input type="email" class="form-control" id="useremail" placeholder="Enter email" required="">  
                                                 <div class="invalid-feedback">
-                                                    Porfavor Ingrese Correo electrónico
-                                                </div>      
+                                                    Ingrese Correo Electrónico
+                                                </div>   
                                             </div>
                     
                                             <div class="mb-3">
-                                                <label for="username" class="form-label">Nombres y Apellidos</label>
-                                                <input type="text" class="form-control" id="username" placeholder="Ingresey Apellidos" required min ="0" max ="999999999"
-                                                oninput="this.value = this.value.slice(0.9)">
+                                                <label for="username" class="form-label">Nombres y Aqpellidos</label>
+                                                <input type="text" class="form-control" id="username" placeholder="Enter username" required="">
                                                 <div class="invalid-feedback">
-                                                    Porfavor ingrese Nombres y Apellidos
-                                                </div>  
+                                                    Ingrese Nombres y Aqpellidos
+                                                </div>
                                             </div>
-
-                                            <div class="mb-3">
-                                                <label for="username" class="form-label">Documento de Identidad </label>
-                                                <input type="number" class="form-control" id="username" placeholder="Ingrese Doc. Identidad" required min = "0"
-                                                max="999999999"
-                                                oninput="this.value = this.value.slice(0,9)">
-                                                <div class="invalid-feedback">
-                                                    Porfavor ingrese Documnto de Identidad
-                                                </div>  
-                                            </div>
-                
+                    
                                             <div class="mb-3">
                                                 <label for="userpassword" class="form-label">Contraseña</label>
                                                 <input type="password" class="form-control" id="userpassword" placeholder="Ingrese Contraseña" required="">
                                                 <div class="invalid-feedback">
-                                                    Porfavor Ingrese Contraseña
-                                                </div>   
+                                                    Ingrese Contraseña
+                                                </div>    
                                             </div>
 
                                             <div class="mb-3">
-                                                <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
-                                                <input type="password" class="form-control" id="confirmPassword" placeholder="Ingrese Nuevamente Contraseña" required="" oninput="validatePassword()">
-                                                <div class="invalid-feedback" id="confirmFeedback">
-                                                    Las contraseñas no coinciden
-                                                </div>   
+                                                <label for="userpassword" class="form-label">Confirmar Contraseña</label>
+                                                <input type="password" class="form-control" id="userpassword" placeholder="Ingrese Contraseña" required="">
+                                                <div class="invalid-feedback">
+                                                    Ingrese Contraseña Nuevamente
+                                                </div>    
                                             </div>
 
-                                            <script>
-                                                function validatePassword() {
-                                                    const password = document.getElementById('userpassword').value;
-                                                    const confirmPassword = document.getElementById('confirmPassword').value;
-                                                    const feedback = document.getElementById('confirmFeedback');
-                                                    if (confirmPassword !== password) {
-                                                        feedback.style.display = 'block'; // Muestra el mensaje de error
-                                                    }else {
-                                                        feedback.style.display = 'none'; // Oculta el mensaje de error
-                                                        document.getElementById('confirmPassword').classList.remove('is-invalid'); // Remueve clase de error
-                                                    }
-                                                }
-                                            </script>
-
                                             <div class="mb-4">
-                                                <p class="mb-0">Al registrarse en el portal acepta los  <a href="#" class="text-primary"><strong> Terminos y Condiciones </strong></a></p>
+                                                <p class="mb-0">Al registrarse acepta los <a href="#" class="text-primary"><strong> Terminos y Condiciones</strong> </a></p>
                                             </div>
                                             <div class="mb-3">
                                                 <button class="btn btn-primary w-100 waves-effect waves-light" type="submit">Registrarse</button>
@@ -137,11 +108,11 @@
                                         </div> -->
 
                                         <div class="mt-5 text-center">
-                                            <p class="text-muted mb-0">Ya tienes una cuenta? <a href="../../index.php" class="text-primary fw-semibold"> Acceder </a> </p>
+                                            <p class="text-muted mb-0">Ya tiene una cuenta? <a href="../../index.php" class="text-primary fw-semibold"> Acceder </a> </p>
                                         </div>
                                     </div>
                                     <div class="mt-4 mt-md-5 text-center">
-                                        <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> <i class="mdi mdi-heart text-danger ">By Equipo Sistemas Enchiladas</i>  </p>
+                                    <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> <i class="mdi mdi-heart text-danger" > Equipo Sistemas Enchisladas </i></p>
                                     </div>
                                 </div>
                             </div>

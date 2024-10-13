@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 
     <head>
 
         <meta charset="utf-8">
-        <title>Acceso | Victor - Mesa de Partes </title>
+        <title>Victor | Victor Mesa de partes </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
         <meta content="Themesbrand" name="author">
@@ -33,20 +33,20 @@
                                 <div class="d-flex flex-column h-100">
                                     <div class="mb-4 mb-md-5 text-center">
                                         <a href="index-1.html" class="d-block auth-logo">
-                                            <img src="assets/picture/Enchis.jpeg" alt="" height="200">
-                                             <h5></h5>
-                                            <span class="logo-txt">La Casa de las enchiladas</span>
+                                            
+                                            <img src="assets/picture/EnchisLog.png" alt="" height="200"> <br>
+                                            <span class="logo-txt"></span>
                                         </a>
                                     </div>
                                     <div class="auth-content my-auto">
                                         <div class="text-center">
-                                            <h5 class="mb-0">Bienvenido a la Mesa de partes </h5>
+                                            <h5 class="mb-0"> Bienvendio !</h5>
                                             <p class="text-muted mt-2">Ingrese sus credenciales.</p>
                                         </div>
                                         <form class="custom-form mt-4 pt-2">
                                             <div class="mb-3">
-                                                <label class="form-label">Correo electronico</label>
-                                                <input type="email" class="form-control" id="usu_correo" placeholder="Ingrese correo electrónico">
+                                                <label class="form-label">Correo Electrónico</label>
+                                                <input type="email" class="form-control" id="usu_correo" placeholder="Ingrese Correo Electrónico">
                                             </div>
                                             <div class="mb-3">
                                                 <div class="d-flex align-items-start">
@@ -55,13 +55,13 @@
                                                     </div>
                                                     <div class="flex-shrink-0">
                                                         <div class="">
-                                                            <a href="auth-recoverpw-1.html" class="text-muted">Olvidasete tu contraseña?</a>
+                                                            <a href="auth-recoverpw-1.html" class="text-muted">Olvidastaste tu contraseña?</a>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 
                                                 <div class="input-group auth-pass-inputgroup">
-                                                    <input type="password" class="form-control" placeholder="Ingrese contraseña" aria-label="Password" aria-describedby="password-addon">
+                                                    <input type="password" class="form-control" placeholder="Ingrese Contraseña" aria-label="Password" aria-describedby="password-addon">
                                                     <button class="btn btn-light shadow-none ms-0" type="button" id="password-addon"><i class="mdi mdi-eye-outline"></i></button>
                                                 </div>
                                             </div>
@@ -81,9 +81,9 @@
                                             </div>
                                         </form>
 
-                                        <div class="mt-4 pt-2 text-center">
+                                        <!-- <div class="mt-4 pt-2 text-center">
                                             <div class="signin-other-title">
-                                                <h5 class="font-size-14 mb-3 text-muted fw-medium">- Ingresa con:  -</h5>
+                                                <h5 class="font-size-14 mb-3 text-muted fw-medium">- Acceder con -</h5>
                                             </div>
 
                                             <ul class="list-inline mb-0">
@@ -103,14 +103,14 @@
                                                     </a>
                                                 </li>
                                             </ul>
-                                        </div>
+                                        </div> -->
 
                                         <div class="mt-5 text-center">
-                                            <p class="text-muted mb-0">No tiene una cuenta ? <a href="view/Registro/" class="text-primary fw-semibold"> Registrate ahora </a> </p>
+                                            <p class="text-muted mb-0">No tienes cuenta? <a href="view/registro/" class="text-primary fw-semibold"> Registrate </a> </p>
                                         </div>
                                     </div>
                                     <div class="mt-4 mt-md-5 text-center">
-                                        <p class="mb-0">© <script>document.write(new Date().getFullYear())</script>  <i class="mdi mdi-heart text-danger"> By Equipo Sistemas Enchiladas </i> </p>
+                                        <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> <i class="mdi mdi-heart text-danger" > Equipo Sistemas Enchisladas </i></p>
                                     </div>
                                 </div>
                             </div>
@@ -149,8 +149,12 @@
                                                     <div class="testi-contain text-white">
                                                         <i class="bx bxs-quote-alt-left text-success display-6"></i>
 
-                                                        <h4 class="mt-4 fw-medium lh-base text-white">“Me siento seguro imponiéndome cambios a mí mismo. 
-                                                            Es mucho más divertido progresar que mirar atrás.”
+                                                        <h4 class="mt-4 fw-medium lh-base text-white">“I feel confident
+                                                            imposing change
+                                                            on myself. It's a lot more progressing fun than looking back.
+                                                            That's why
+                                                            I ultricies enim
+                                                            at malesuada nibh diam on tortor neaded to throw curve balls.”
                                                         </h4>
                                                         <div class="mt-4 pt-3 pb-5">
                                                             <div class="d-flex align-items-start">
@@ -171,12 +175,12 @@
                                                     <div class="testi-contain text-white">
                                                         <i class="bx bxs-quote-alt-left text-success display-6"></i>
 
-                                                        <h4 class="mt-4 fw-medium lh-base text-white">“Nuestra tarea debe ser
-                                                            liberarnos ampliando nuestro círculo de compasión para abarcar
-                                                            todos los seres
-                                                            seres vivos y
-                                                            toda la naturaleza quis consectetur nunc sit amet semper justo.
-                                                            y su belleza.”</h4>
+                                                        <h4 class="mt-4 fw-medium lh-base text-white">“Our task must be to
+                                                            free ourselves by widening our circle of compassion to embrace
+                                                            all living
+                                                            creatures and
+                                                            the whole of quis consectetur nunc sit amet semper justo. nature
+                                                            and its beauty.”</h4>
                                                         <div class="mt-4 pt-3 pb-5">
                                                             <div class="d-flex align-items-start">
                                                                 <div class="flex-shrink-0">
@@ -196,12 +200,12 @@
                                                     <div class="testi-contain text-white">
                                                         <i class="bx bxs-quote-alt-left text-success display-6"></i>
 
-                                                        <h4 class="mt-4 fw-medium lh-base text-white">“He aprendido que
-                                                            la gente olvidará lo que dijiste, la gente olvidará lo que
-                                                            hiciste,
-                                                            pero la gente nunca olvidará
-                                                            cómo donec in efficitur lectus, nec lobortis metus les hiciste
-                                                            sentir.”</h4>
+                                                        <h4 class="mt-4 fw-medium lh-base text-white">“I've learned that
+                                                            people will forget what you said, people will forget what you
+                                                            did,
+                                                            but people will never forget
+                                                            how donec in efficitur lectus, nec lobortis metus you made them
+                                                            feel.”</h4>
                                                         <div class="mt-4 pt-3 pb-5">
                                                             <div class="d-flex align-items-start">
                                                                 <img src="assets/picture/avatar-3-1.jpg" class="avatar-md img-fluid rounded-circle" alt="...">
