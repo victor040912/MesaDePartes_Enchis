@@ -42,7 +42,8 @@
                                             <h5 class="mb-0">Registrar Cuenta</h5>
                                             <p class="text-muted mt-2">Registre sus datos en el portal.</p>
                                         </div>
-                                        <form id="mnt_form" class="needs-validation custom-form mt-4 pt-2" novalidate="" action="index.html">
+                                        <form id="mnt_form" class="needs-validation custom-form mt-4 pt-2" novalidate="">
+
                                             <div class="mb-3">
                                                 <label for="usu_correo" class="form-label">Correo Electrónico</label>
                                                 <input type="email" class="form-control" id="usu_correo" name="usu_correo" placeholder="Ingrese Correo" required="">  

@@ -1,15 +1,15 @@
-
 function init() {
-    /* TODO: Escucha el evento submit del formulario */
+    /* Escucha el evento submit del formulario */
     $("#mnt_form").on("submit", function (e) {
-        /* TODO: Evita que el formulario se envíe automáticamente */
+        /* Evita que el formulario se envíe automáticamente */
         e.preventDefault();
+        registrar();  // Asegúrate de que registrar() se llame aquí
     });
 }
 
-
 function registrar(){
     var formData = new FormData($("#mnt_form")[0]);
+
     $.ajax({
         url: "../../controller/usuario.php?op=registrar",
         type: "POST",
@@ -18,12 +18,14 @@ function registrar(){
         processData: false,
         success: function(datos){
             console.log(datos);
+            alert("Usuario registrado con éxito.");
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error("Error en la solicitud: " + textStatus, errorThrown);
+            alert("Hubo un error al registrar el usuario.");
         }
-        
     });
 }
 
 init();
-
-console.log("test");
 
