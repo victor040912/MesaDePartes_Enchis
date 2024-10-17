@@ -87,7 +87,25 @@ function registrar(){
         contentType: false,
         processData: false,
         success: function(datos){
-            console.log("Guardado" + datos);
+            if (datos == 1){
+                Swal.fire({
+                    title: "Registro",
+                    text: "Se registro correctamente. Porfavor iniciar sesión",
+                    icon: "success",
+                    confirmButtonColor: "#5156be",
+                    timer: 5000,
+                });
+
+            }else if (datos == 0){
+                Swal.fire({
+                    title: "Registro",
+                    text: "El correo electronico ya existe.",
+                    icon: "error",
+                    confirmButtonColor: "#5156be",
+                });
+            }
+            
+            console.log(datos);
            
         }   
     });

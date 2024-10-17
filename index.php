@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
     <meta content="Themesbrand" name="author">
+   
 
     <!-- preloader css -->
     <link rel="stylesheet" href="assets/css/preloader.min-1.css" type="text/css">
