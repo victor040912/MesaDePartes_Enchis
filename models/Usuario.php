@@ -23,6 +23,9 @@ class Usuario extends Conectar {
         $sql->bindValue(3, $usu_pass);
 
         /* Ejecutar consulta */
+
+
+        
         $sql->execute();
     }
 }

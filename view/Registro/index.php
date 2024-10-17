@@ -47,33 +47,25 @@
                                             <div class="mb-3">
                                                 <label for="usu_correo" class="form-label">Correo Electrónico</label>
                                                 <input type="email" class="form-control" id="usu_correo" name="usu_correo" placeholder="Ingrese Correo" required="">  
-                                                <div class="invalid-feedback">
-                                                    Ingrese Correo Electrónico
-                                                </div>   
+                                                <div class="validation-error text-danger"></div>   
                                             </div>
                     
                                             <div class="mb-3">
                                                 <label for="usu_nomape" class="form-label">Nombres y Aqpellidos</label>
                                                 <input type="text" class="form-control" id="usu_nomape" name="usu_nomape" placeholder="Enter username" required="">
-                                                <div class="invalid-feedback">
-                                                    Ingrese Nombres y Aqpellidos
-                                                </div>
+                                                <div class="validation-error text-danger"></div>  
                                             </div>
                     
                                             <div class="mb-3">
                                                 <label for="usu_pass" class="form-label">Contraseña</label>
                                                 <input type="password" class="form-control" id="usu_pass" name="usu_pass" placeholder="Ingrese Contraseña" required="">
-                                                <div class="invalid-feedback">
-                                                    Ingrese Contraseña
-                                                </div>    
+                                                <div class="validation-error text-danger"></div>  
                                             </div>
 
                                             <div class="mb-3">
                                                 <label for="usu_pass_confir" class="form-label">Confirmar Contraseña</label>
                                                 <input type="password" class="form-control" id="usu_pass_confir" name="usu_pass_confir" placeholder="Ingrese Contraseña" required="">
-                                                <div class="invalid-feedback">
-                                                    Ingrese Contraseña Nuevamente
-                                                </div>    
+                                                <div class="validation-error text-danger"></div>   
                                             </div>
 
                                             <div class="mb-4">
@@ -152,12 +144,8 @@
                                                     <div class="testi-contain text-white">
                                                         <i class="bx bxs-quote-alt-left text-success display-6"></i>
 
-                                                        <h4 class="mt-4 fw-medium lh-base text-white">“I feel confident
-                                                            imposing change
-                                                            on myself. It's a lot more progressing fun than looking back.
-                                                            That's why
-                                                            I ultricies enim
-                                                            at malesuada nibh diam on tortor neaded to throw curve balls.”
+                                                        <h4 class="mt-4 fw-medium lh-base text-white">“Me siento seguro imponiéndome cambios a mí mismo. 
+                                                        Es mucho más divertido progresar que mirar atrás.”
                                                         </h4>
                                                         <div class="mt-4 pt-3 pb-5">
                                                             <div class="d-flex align-items-start">
@@ -178,12 +166,11 @@
                                                     <div class="testi-contain text-white">
                                                         <i class="bx bxs-quote-alt-left text-success display-6"></i>
 
-                                                        <h4 class="mt-4 fw-medium lh-base text-white">“Our task must be to
-                                                            free ourselves by widening our circle of compassion to embrace
-                                                            all living
-                                                            creatures and
-                                                            the whole of quis consectetur nunc sit amet semper justo. nature
-                                                            and its beauty.”</h4>
+                                                        <h4 class="mt-4 fw-medium lh-base text-white">“Nuestra tarea debe ser
+                                                        liberarnos ampliando nuestro círculo de compasión para abarcar
+                                                        todos los seres
+                                                        vivos y
+                                                        toda la naturaleza para apreciar su belleza.”</h4>
                                                         <div class="mt-4 pt-3 pb-5">
                                                             <div class="d-flex align-items-start">
                                                                 <div class="flex-shrink-0">
@@ -203,12 +190,11 @@
                                                     <div class="testi-contain text-white">
                                                         <i class="bx bxs-quote-alt-left text-success display-6"></i>
 
-                                                        <h4 class="mt-4 fw-medium lh-base text-white">“I've learned that
-                                                            people will forget what you said, people will forget what you
-                                                            did,
-                                                            but people will never forget
-                                                            how donec in efficitur lectus, nec lobortis metus you made them
-                                                            feel.”</h4>
+                                                        <h4 class="mt-4 fw-medium lh-base text-white">“He aprendido que
+                                                        la gente olvidará lo que dijiste, la gente olvidará lo que
+                                                        hiciste,
+                                                        pero la gente nunca olvidará
+                                                        cómo en momentos dificiles, las hiciste sentir.”</h4>
                                                         <div class="mt-4 pt-3 pb-5">
                                                             <div class="d-flex align-items-start">
                                                                 <img src="../../assets/picture/avatar-3.jpg" class="avatar-md img-fluid rounded-circle" alt="...">
@@ -249,7 +235,9 @@
         <script src="../../assets/js/pace.min.js"></script>
 
         <!-- validation init -->
-        <script src="../../assets/js/validation.init.js"></script>
+        <!-- <script src="../../assets/js/validation.init.js"></script> -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.6.0/validator.min.js"></script>
 
         <script type="text/javascript" src="registro.js"></script>
 
