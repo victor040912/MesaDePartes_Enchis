@@ -35,7 +35,7 @@
                             <div class="w-100">
                                 <div class="d-flex flex-column h-100">
                                     <div class="mb-4 mb-md-5 text-center">
-                                        <a href="index.html" class="d-block auth-logo">
+                                        <a href="index.php" class="d-block auth-logo">
                                             <img src="../../assets/picture/EnchisLog.png" alt="" height="200"> <span class="logo-txt"></span>
                                         </a>
                                     </div>

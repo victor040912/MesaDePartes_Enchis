@@ -1,3 +1,4 @@
+var timerInterval;
 function init() {
     /* TODO: Escucha el evento submit del formulario */
     $("#mnt_form").on("submit", function (e) {
@@ -90,10 +91,30 @@ function registrar(){
             if (datos == 1){
                 Swal.fire({
                     title: "Registro",
-                    text: "Se registro correctamente. Porfavor iniciar sesión",
+                    text: "Se registro correctamente. Porfavor iniciar sesión. Redireccionando en 10 segundos.",
                     icon: "success",
                     confirmButtonColor: "#5156be",
                     timer: 5000,
+                    timerProgessBar: true,
+                    didOpen: function(){
+                        Swal.showLoading();
+                        timerInterval = setInterval(function () {
+                            var content = Swal.getHtmlContainer();
+                            if (!content) return;
+                            var countdownElement = content.querySelector("b");
+                            if (countdownElement) {
+                              countdownElement.textContent = (Swal.getTimerLeft() / 1000).toFixed(0);
+                            }
+                        }, 100);
+                    },
+                    didClose: function(){
+                        clearInterval(timerInterval);
+                        window.location.href = "../../index.php";
+                    },
+                }).then(function(result){
+                    if (result.dismiss === Swal.DismissReason.timer) {
+                        /* console.log("I was closed by the timer"); */
+                    }
                 });
 
             }else if (datos == 0){
