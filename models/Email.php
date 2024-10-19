@@ -12,7 +12,20 @@ class Email extends PHPMailer{
     protected $gCorreo = 'soporte.ti@lacasadelasenchiladas.pe';
     protected $gContrasena = 'enchis07';
     
+    private $key="MesaDePartes1";
+    private $cipher="aes-256-cbc";
+
+    
     public function registrar($usu_id){
+
+        $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length($this->cipher));
+        $cifrado = openssl_encrypt($usu_id, $this->cipher, $this->key, OPENSSL_RAW_DATA, $iv);
+        $textoCifrado = base64_encode($iv . $cifrado);
+
+        $conexion = new Conectar();
+
+        $usuario = new Usuario();
+        $datos= $usuario -> get_usuario_id($usu_id);
 
         $this->IsSMTP();
         $this->Host = 'smtp.hostinger.com';
@@ -23,16 +36,18 @@ class Email extends PHPMailer{
         $this->Username = $this->gCorreo;
         $this->Password = $this->gContrasena;
 
-        $this->setFrom($this->gCorreo,"Registro en Mesa de Partes AnderCode");
+        $this->setFrom($this->gCorreo,"Registro en Mesa de Partes");
 
         $this->CharSet = 'UTF8';
-        $this->addAddress("soporte.ti@lacasadelasenchiladas.pe");
+        $this->addAddress($datos[0]["usu_correo"]);
         $this->IsHTML(true);
         $this->Subject = "Mesa de Partes";
 
+        $url = $conexion->ruta() . "view/confirmar/confirmar.php/>?id=" $textoCifrado;
+
 
         $cuerpo = file_get_contents("../assets/email/registrar.html");
-        $cuerpo = str_replace("xlinkcorreourl",$usu_id,$cuerpo);
+        $cuerpo = str_replace("xlinkcorreourl",$url,$cuerpo);
 
         $this->Body = $cuerpo;
         $this->AltBody = strip_tags("Confirmar Registro");
@@ -45,7 +60,12 @@ class Email extends PHPMailer{
         }
 
     }
-} */
+}
+
+
+
+*/
+
 
 
 
