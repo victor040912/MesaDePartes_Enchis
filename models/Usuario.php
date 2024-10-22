@@ -2,8 +2,8 @@
 /* TODO: Definición de la clase Usuario que extiende la clase Conectar */
 class Usuario extends Conectar {
 
-/* 
-    public function login(){
+
+    /* public function login(){
         $conectar = parent::conexion();
         parent::set_names();
         if(isset($_POST["enviar"])){
@@ -45,9 +45,10 @@ class Usuario extends Conectar {
                 }
             }
 
-        }
+        } 
+}*/
 
-    } */
+    
     public function registrar_usuario($usu_nomape, $usu_correo, $usu_pass) {
         
         /* Conexión a la base de datos */
@@ -72,11 +73,11 @@ class Usuario extends Conectar {
         /* Ejecutar consulta */
         $sql->execute();
 
-        /* $sql1="select last_insert_id() as 'usu_id'";
+        $sql1="select last_insert_id() as 'usu_id'";
         $sql1=$conectar->prepare($sql1);
         $sql1->execute();
-        return $sql1->fetchAll(); */
-        return $sql->fetchAll();
+        return $sql1->fetchAll();
+        /* return $sql->fetchAll(); */
     }
 
     public function get_usuario_correo($usu_correo){
@@ -96,22 +97,25 @@ class Usuario extends Conectar {
         return $sql->fetchAll();
     }
 
-    /* public function get_usuario_id($usu_id){
+     public function get_usuario_id($usu_id){
         /* TODO: Obtener la conexión a la base de datos utilizando el método de la clase padre */
-        /* $conectar = parent::conexion(); */
+         $conectar = parent::conexion(); 
         /* TODO: Establecer el juego de caracteres a UTF-8 utilizando el método de la clase padre */
-       /*  parent::set_names(); */
+        parent::set_names(); 
         /* TODO: Consulta SQL para insertar un nuevo usuario en la tabla tm_usuario */
-        /* $sql="SELECT * FROM tm_usuario */
-           /*  WHERE usu_id = ?"; */
+        $sql="SELECT * FROM tm_usuario 
+            WHERE usu_id = ?"; 
         /* TODO:Preparar la consulta SQL */
-        /* $sql=$conectar->prepare($sql); */
+        $sql=$conectar->prepare($sql); 
         /* TODO: Vincular los valores a los parámetros de la consulta */
-        /* $sql->bindValue(1,$usu_id); */
+         $sql->bindValue(1,$usu_id); 
         /* TODO: Ejecutar la consulta SQL */
-        /* $sql->execute();
-        return $sql->fetchAll(); */
-   /*  }  */ 
+         $sql->execute();
+        return $sql->fetchAll(); 
+    }
+    
+    
+    
 }
 
 

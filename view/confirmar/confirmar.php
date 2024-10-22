@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
     <head>
 
@@ -80,6 +80,8 @@
         <script src="../../assets/js/feather.min.js"></script>
         <!-- pace js -->
         <script src="../../assets/js/pace.min.js"></script>
+
+        <script type="text/javascript" src="confirmar.js"></script>
 
     </body>
 
