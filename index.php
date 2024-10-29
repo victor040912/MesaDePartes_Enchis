@@ -1,5 +1,14 @@
+<?php
+    require_once("config/conexion.php");
+    if(isset($_POST["enviar"]) and $_POST["enviar"]=="si"){
+        require_once("models/Usuario.php");
+        $usuario = new Usuario();
+        $usuario->login();
+    }
+?>
+
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -44,10 +53,48 @@
                                         <h5 class="mb-0"> Bienvendio !</h5>
                                         <p class="text-muted mt-2">Ingrese sus credenciales.</p>
                                     </div>
-                                    <form class="custom-form mt-4 pt-2">
+                                    <form class="custom-form mt-4 pt-2" action="" method="post">
+
+                                    <?php
+                                                if(isset($_GET["m"])){
+                                                    switch($_GET["m"]){
+                                                        case "1":
+                                                            ?>
+                                                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                                    <i class="mdi mdi-block-helper me-2"></i>
+                                                                    Correo Electronico no encontrado.
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                                </div>
+                                                            <?php
+                                                            break;
+
+                                                        case "2":
+                                                            ?>
+                                                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                                    <i class="mdi mdi-block-helper me-2"></i>
+                                                                    Campos Vacios.
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                                </div>
+                                                            <?php
+                                                            break;
+
+                                                        case "3":
+                                                            ?>
+                                                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                                    <i class="mdi mdi-block-helper me-2"></i>
+                                                                    Contraseña Incorrecta.
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                                </div>
+                                                            <?php
+                                                            break;
+                                                    }
+                                                }
+                                            ?>
+                                        
+                                    
                                         <div class="mb-3">
                                             <label class="form-label">Correo Electrónico</label>
-                                            <input type="email" class="form-control" id="usu_correo" placeholder="Ingrese Correo Electrónico">
+                                            <input type="email" class="form-control" id="usu_correo" name="usu_correo" placeholder="Ingrese Correo Electrónico" require>
                                         </div>
                                         <div class="mb-3">
                                             <div class="d-flex align-items-start">
@@ -56,13 +103,13 @@
                                                 </div>
                                                 <div class="flex-shrink-0">
                                                     <div class="">
-                                                        <a href="auth-recoverpw-1.html" class="text-muted">Olvidastaste tu contraseña?</a>
+                                                        <a href="view/recuperar/index.php" class="text-muted">Olvidastaste tu contraseña?</a>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="input-group auth-pass-inputgroup">
-                                                <input type="password" class="form-control" placeholder="Ingrese Contraseña" aria-label="Password" aria-describedby="password-addon">
+                                                <input type="password" class="form-control" id="usu_pass" name="usu_pass" placeholder="Ingrese Contraseña" aria-label="Password" aria-describedby="password-addon" require>
                                                 <button class="btn btn-light shadow-none ms-0" type="button" id="password-addon"><i class="mdi mdi-eye-outline"></i></button>
                                             </div>
                                         </div>
@@ -78,6 +125,7 @@
 
                                         </div>
                                         <div class="mb-3">
+                                            <input type="hidden" name="enviar" value="si">
                                             <button class="btn btn-primary w-100 waves-effect waves-light" type="submit">Acceder</button>
                                         </div>
                                     </form>
@@ -107,6 +155,7 @@
                                         </div> -->
 
                                     <div class="mt-5 text-center">
+                                        <input type="hidden" name="enviar" value="si">
                                         <p class="text-muted mb-0">No tienes cuenta? <a href="view/registro/" class="text-primary fw-semibold"> Registrate </a> </p>
                                     </div>
                                 </div>
@@ -160,7 +209,7 @@
                                                         <div class="mt-4 pt-3 pb-5">
                                                             <div class="d-flex align-items-start">
                                                                 <div class="flex-shrink-0">
-                                                                    <img src="../../assets/picture/avatar-1.jpg" class="avatar-md img-fluid rounded-circle" alt="...">
+                                                                    <img src="assets/picture/avatar-1.jpg" class="avatar-md img-fluid rounded-circle" alt="...">
                                                                 </div>
                                                                 <div class="flex-grow-1 ms-3 mb-4">
                                                                     <h5 class="font-size-18 text-white">Richard Drews
@@ -184,7 +233,7 @@
                                                         <div class="mt-4 pt-3 pb-5">
                                                             <div class="d-flex align-items-start">
                                                                 <div class="flex-shrink-0">
-                                                                    <img src="../../assets/picture/avatar-2.jpg" class="avatar-md img-fluid rounded-circle" alt="...">
+                                                                    <img src="assets/picture/avatar-2.jpg" class="avatar-md img-fluid rounded-circle" alt="...">
                                                                 </div>
                                                                 <div class="flex-grow-1 ms-3 mb-4">
                                                                     <h5 class="font-size-18 text-white">Rosanna French
@@ -207,7 +256,7 @@
                                                         toda la naturaleza para apreciar su belleza.”</h4>
                                                         <div class="mt-4 pt-3 pb-5">
                                                             <div class="d-flex align-items-start">
-                                                                <img src="../../assets/picture/avatar-3.jpg" class="avatar-md img-fluid rounded-circle" alt="...">
+                                                                <img src="assets/picture/avatar-3.jpg" class="avatar-md img-fluid rounded-circle" alt="...">
                                                                 <div class="flex-1 ms-3 mb-4">
                                                                     <h5 class="font-size-18 text-white">Ilse R. Eaton</h5>
                                                                     <p class="mb-0 text-white-50">Manager

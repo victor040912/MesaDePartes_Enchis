@@ -10,7 +10,7 @@ $(document).ready(function(){
     console.log(id);
 
     $.post("../../controller/usuario.php?op=activar",{usu_id : id}, function (data){
-
+        
     })
 
 });

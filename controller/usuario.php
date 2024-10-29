@@ -23,9 +23,9 @@ switch($_GET["op"]){
         break;
 
     
-    /* case "activar":
+    case "activar":
         $usuario->activar_usuario($_POST["usu_id"]);
-        break; */
+        break;
 }
 
 ?>
