@@ -12,8 +12,8 @@
 
 <head>
 
-    <meta charset="utf-8">
     <title>Victor | Victor Mesa de partes </title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
     <meta content="Themesbrand" name="author">
@@ -137,22 +137,32 @@
 
                                             <ul class="list-inline mb-0">
                                                 <li class="list-inline-item">
-                                                    <a href="javascript:void()" class="social-list-item bg-primary text-white border-primary">
-                                                        <i class="mdi mdi-facebook"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href="javascript:void()" class="social-list-item bg-info text-white border-info">
-                                                        <i class="mdi mdi-twitter"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href="javascript:void()" class="social-list-item bg-danger text-white border-danger">
-                                                        <i class="mdi mdi-google"></i>
-                                                    </a>
+                                                <!--TODO: Botón "Iniciar sesión con Google" con atributos de datos HTML para la API -->
+ 
+                                                <div id="g_id_onloda"
+                                                data-cliente_id="711507713346-cesc0jqtu5074a4a4ng3d3m15ifmgc0a.apps.googleusercontent.com"
+                                                data-context="signin"
+                                                data-ux_mode="popud"
+                                                data-callback="handleCredentialResponse"
+                                                data-auto_prompt="false"
+                                                >
+
+                                                </div> 
+
+                                                <!--TODO: Configuración del botón de inicio de sesión con Google -->
+
+                                                <div class="g_id_signin"
+                                                data-type="standard"
+                                                data-theme="outline"
+                                                data-text="signin_with"
+                                                data-size="large"
+                                                data-logo_alignment="left"> 
+                                                    
+                                                </div> 
+
                                                 </li>
                                             </ul>
-                                        </div> -->
+                                    <!-- </div> -->
 
                                     <div class="mt-5 text-center">
                                         <input type="hidden" name="enviar" value="si">
@@ -294,6 +304,9 @@
     <script src="assets/js/pace.min-1.js"></script>
     <!-- password addon init -->
     <script src="assets/js/pass-addon.init-1.js"></script>
+    <!--TODO: Script para cargar la API de Google Sign-In de manera asíncrona -->
+    <script src="https://accounts.google.com/gsi/client" async></script>
+
 
 </body>
 
