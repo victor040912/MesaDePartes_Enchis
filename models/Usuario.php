@@ -22,14 +22,14 @@ public function login(){
                 $resultado=$sql->fetch();
                 if($resultado){
                     $usu_pass = $resultado["usu_pass"];
-                   /*  $textoCifrado = $resultado["usu_pass"]; */
+                    $textoCifrado = $resultado["usu_pass"];
 
-                    /* $iv_dec = substr(base64_decode($textoCifrado), 0, openssl_cipher_iv_length($this->cipher));
+                    $iv_dec = substr(base64_decode($textoCifrado), 0, openssl_cipher_iv_length($this->cipher));
                     $cifradoSinIV = substr(base64_decode($textoCifrado), openssl_cipher_iv_length($this->cipher));
-                    $textoDecifrado = openssl_decrypt($cifradoSinIV, $this->cipher, $this->key, OPENSSL_RAW_DATA, $iv_dec); */
+                    $textoDecifrado = openssl_decrypt($cifradoSinIV, $this->cipher, $this->key, OPENSSL_RAW_DATA, $iv_dec);
 
-                    /* if($textoDecifrado==$pass){ */
-                    if($usu_pass ==$pass){
+                    if($textoDecifrado==$pass){
+                    /* if($usu_pass ==$pass){ */
                         if(is_array($resultado) and count($resultado)>0){
                             $_SESSION["usu_id"] = $resultado["usu_id"];
                             $_SESSION["usu_nomape"] = $resultado["usu_nomape"];
@@ -72,7 +72,7 @@ public function login(){
         /* Vincular valores */
         $sql->bindValue(1, $usu_nomape);
         $sql->bindValue(2, $usu_correo);
-        $sql->bindValue(3, $usu_pass);
+        $sql->bindValue(3, $textoCifrado);
         $sql->bindValue(4, $usu_img);
         $sql->bindValue(5, $est);
 
@@ -147,9 +147,9 @@ public function login(){
 
     public function recuperar_usuario($usu_correo,$usu_pass){
 
-        /* $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length($this->cipher));
+        $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length($this->cipher));
         $cifrado = openssl_encrypt($usu_pass, $this->cipher, $this->key, OPENSSL_RAW_DATA, $iv);
-        $textoCifrado = base64_encode($iv . $cifrado); */
+        $textoCifrado = base64_encode($iv . $cifrado);
 
         /* TODO: Obtener la conexión a la base de datos utilizando el método de la clase padre */
         $conectar = parent::conexion();
@@ -164,8 +164,8 @@ public function login(){
         /* TODO:Preparar la consulta SQL */
         $sql=$conectar->prepare($sql);
         /* TODO: Vincular los valores a los parámetros de la consulta */
-        /* $sql->bindValue(1,$usu_textoCifrado); */
-        $sql->bindValue(1,$usu_pass);
+        $sql->bindValue(1,$textoCifrado);
+        /* $sql->bindValue(1,$usu_pass); */
         $sql->bindValue(1,$usu_correo);
         /* TODO: Ejecutar la consulta SQL */
         $sql->execute();
