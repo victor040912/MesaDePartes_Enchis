@@ -52,7 +52,7 @@ public function login(){
 }
 
     
-    public function registrar_usuario($usu_nomape, $usu_correo, $usu_pass) {
+    public function registrar_usuario($usu_nomape, $usu_correo, $usu_pass, $usu_img, $est) {
 
         $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length($this->cipher));
         $cifrado = openssl_encrypt($usu_pass, $this->cipher, $this->key, OPENSSL_RAW_DATA, $iv);
@@ -64,8 +64,8 @@ public function login(){
 
         /* Consulta SQL */
         $sql = "INSERT INTO tm_usuario
-                (usu_nomape, usu_correo, usu_pass, est)
-                VALUES (?, ?, ?, 1)";
+                (usu_nomape, usu_correo, usu_pass, usu_img, est)
+                VALUES (?, ?, ?, ?, ?)";
         
         $sql = $conectar->prepare($sql);
 
@@ -73,6 +73,8 @@ public function login(){
         $sql->bindValue(1, $usu_nomape);
         $sql->bindValue(2, $usu_correo);
         $sql->bindValue(3, $usu_pass);
+        $sql->bindValue(4, $usu_img);
+        $sql->bindValue(5, $est);
 
         /* Ejecutar consulta */
         $sql->execute();
