@@ -74,6 +74,6 @@
         <div class="rightbar-overlay"></div>
 
         <?php require_once("../html/js.php")?>
-        <script type="text/javascript" src="nuevaconsult.js"></script>
+        <script type="text/javascript" src="nuevaconsulta.js"></script>
     </body>
 </html>

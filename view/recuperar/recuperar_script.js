@@ -1,3 +1,4 @@
+console.log('HOLA DESDE RECUPERAR');
 $(document).ready(function(){
 
     

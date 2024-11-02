@@ -83,7 +83,7 @@
         <!-- Sweet Alerts js -->
         <script src="../../assets/js/sweetalert2.min.js"></script>
 
-        <script type="text/javascript" src="recuperar.js"></script>
+        <script type="text/javascript" src="recuperar_script.js"></script>
     </body>
 
 </html>
