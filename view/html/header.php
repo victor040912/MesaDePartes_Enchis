@@ -59,6 +59,7 @@
                         </div>
 
                         <input type="hidden" id="user_idx" value="<?php echo $_SESSION["usu_id"]?>">
+                        
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item bg-soft-light border-start border-end" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle header-profile-user" src="<?php echo $_SESSION["usu_img"] ?>" alt="Header Avatar">
