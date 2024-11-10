@@ -1,4 +1,8 @@
+console.log("SAO");
 
+let myDropzone = new Dropzone('.dropzone',{
+    
+});
 
 function init(){
     $("#documento_form").on("submit",function(e){
@@ -8,7 +12,6 @@ function init(){
 
 function guardar(e){
     e.preventDefault();
-
     var formData = new FormData($("#documento_form")[0]);
     $.ajax({
         url:"../../controller/documento.php?op=registrar",
@@ -16,23 +19,26 @@ function guardar(e){
         data: formData,
         contentType: false,
         processData: false,
-        success: function(data){
+        succes: function(data){
             console.log(data);
         }
-    });
+    })
 }
 
 $(document).ready(function() {
 
     $.post("../../controller/area.php?op=combo",function(data){
         $('#area_id').html(data);
-    })
-    
+    });
+
     $.post("../../controller/tramite.php?op=combo",function(data){
         $('#tra_id').html(data);
-    })
+    });
 
     $.post("../../controller/tipo.php?op=combo",function(data){
-        $('#tipo_id').html(data);
+        $('#tip_id').html(data);
     });
+
 });
+
+init();

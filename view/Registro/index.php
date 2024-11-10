@@ -107,7 +107,7 @@
                                         </div>
                                     </div>
                                     <div class="mt-4 mt-md-5 text-center">
-                                    <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> <i class="mdi mdi-heart text-danger" > Equipo Sistemas Enchisladas </i></p>
+                                    <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> <i class="mdi mdi-heart text-danger" > Victor Quispe </i></p>
                                     </div>
                                 </div>
                             </div>

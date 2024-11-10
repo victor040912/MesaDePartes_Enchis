@@ -48,10 +48,9 @@ require_once("../../config/conexion.php")
                                 </div>
 
                                 <div class="card-body">
+
                                     <form method="post" id="documento_form">
                                         <div class="row">
-
-
                                             <div class="col-lg-3">
                                                 <div class="mb-3">
                                                     <label for="form-label" class="form-label">Area</label>
@@ -61,7 +60,7 @@ require_once("../../config/conexion.php")
                                                 </div>
                                             </div>
 
-                                            <div class="col-lg-9">
+                                            <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label for="example-text-input" class="form-label">Tramite</label>
                                                     <select class="form-select" name="tra_id" id="tra_id" placeholder="Seleccionar">
@@ -80,7 +79,7 @@ require_once("../../config/conexion.php")
                                             <div class="col-lg-3">
                                                 <div class="mb-3">
                                                     <label for="form-label" class="form-label">Tipo (*)</label>
-                                                    <select class="form-select" name="tipo_id" id="tipo_id" placeholder="Seleccionar" required>
+                                                    <select class="form-select" name="tip_id" id="tip_id" placeholder="Seleccionar" required>
                                                         <option value="">Seleccionar</option>
 
                                                     </select>
@@ -90,7 +89,7 @@ require_once("../../config/conexion.php")
                                             <div class="col-lg-3">
                                                 <div class="mb-3">
                                                     <label for="form-label" class="form-label">DNI / RUC (*)</label>
-                                                    <input class="form-control" type="number" value="" name="doc_dni" id="doc_dni" required>
+                                                    <input class="form-control" type="text" value="" name="doc_dni" id="doc_dni" required>
                                                     <!-- maxlength="12" oninput="if(this.value.length > 12) this.value = this.value.slice(0, 12);" -->
                                                 </div>
                                             </div>
@@ -110,34 +109,27 @@ require_once("../../config/conexion.php")
                                             </div>
 
                                             <div class="col-lg-12">
-                                                <div class="fallback">
-                                                    <input name="file" type="file" multiple="multiple">
-                                                </div>
-                                                <div class="dz-message needsclick">
-                                                    <div class="mb-3">
-                                                        <i class="display-4 text-muted bx bx-cloud-upload"></i>
+                                                <div class="dropzone" >
+                                                    <div class="dz-defaul dz-message" >
+                                                        <button class="dz-button" type="button" >
+                                                            <img src="../../assets/image/upload.png" alt="" >
+                                                        </button>
+                                                        <div class="dz- message" data-dz-message><span>Arrastra y suelta archivos aqui o haz click para seleccionar archivos</span> </div>
                                                     </div>
-                                                    <h5> Subir archivos </h5>
-                                                </div>
+                                                </div> 
                                             </div>
 
                                             <div class="d-flex flex-wrap gap-2 mt-4">
-                                                <button type="button" id="btnlimpiar" class="btn btn-secondary waves-effect waves-light">Limpiar</button>
-                                                <button type="submit" id="btnguardar" class="btn btn-primary waves-effect waves-light">Guardar</button>
+                                                <button type="button" class="btn btn-secondary waves-effect waves-light">Limpiar</button>
+                                                <button type="submit" class="btn btn-primary waves-effect waves-light">Guardar</button>
                                             </div>
-
-
                                         </div>
                                     </form>
-
                                 </div>
-
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
 
@@ -153,7 +145,7 @@ require_once("../../config/conexion.php")
 
     <?php require_once("../html/js.php") ?>
 
-    <script type="text/javascript" src="nuevotramites.js"></script>
+    <script type="text/javascript" src="nuevotramite.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,4 @@
 <?php
-
     class Area extends Conectar{
         public function get_area(){
             /* TODO: Obtener la conexión a la base de datos utilizando el método de la clase padre */

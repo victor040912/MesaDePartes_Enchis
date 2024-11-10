@@ -7,7 +7,7 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="text-sm-end d-none d-sm-block">
-                                    Diseño y Desarrollo <a class="text"> Equipo Sistemas Enchiladas</a>
+                                    Diseño y Desarrollo <a class="text"> Victor Quispe </a>
                                 </div>
                             </div>
                         </div>
