@@ -6,6 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 
 require_once("../config/conexion.php");
 require_once("../models/Usuario.php");
+require_once("../models/Documento.php");
 
 class Email extends PHPMailer{
 
@@ -76,7 +77,7 @@ class Email extends PHPMailer{
         $this->setFrom($this->gCorreo,"Recuperar contraseña en Mesa de Partes");
 
         $this->CharSet = 'UTF8';
-        $this->addAddress("shavialonso04@hotmail.com");
+        $this->addAddress($datos[0]["usu_correo"]);
         $this->IsHTML(true);
         $this->Subject = "Mesa de Partes";
 
@@ -107,6 +108,56 @@ class Email extends PHPMailer{
         return substr($resultado,0,6);
     }
     
+    public function enviar_registro($doc_id){
+
+        $conexion = new Conectar();
+
+        $usuario = new Documento();
+        $datos = $usuario -> get_documento_x_id($doc_id);
+
+        
+        $this->IsSMTP();
+        $this->Host = 'smtp.host.com';
+        $this->Port = 25;//Aqui el puerto
+        $this->SMTPAuth = true;
+        $this->SMTPSecure = 'tls';
+
+        $this->Username = $this->gCorreo;
+        $this->Password = $this->gContrasena;
+        $this->setFrom($this->gCorreo,"Nuevo Tramite en Mesa de Partes");
+
+        $this->CharSet = 'UTF8';
+        $this->addAddress($datos[0]["usu_correo"]);
+        $this->addAddress($datos[0]["area_correo"]);
+
+        $this->IsHTML(true);
+        $this->Subject = "Mesa de Partes";
+
+        $url = $conexion->ruta();
+ 
+        $cuerpo = file_get_contents("../assets/email/enviar.html");
+        $cuerpo = str_replace("xlinkcorreourl",$url,$cuerpo);
+
+        $cuerpo = str_replace("xnrotramite",$datos[0]["nrotramite"],$cuerpo);
+        $cuerpo = str_replace("xarea",$datos[0]["area_nom"],$cuerpo);
+        $cuerpo = str_replace("xtramite",$datos[0]["tra_nom"],$cuerpo);
+        $cuerpo = str_replace("xnroexterno",$datos[0]["nrotramite"],$cuerpo);
+        $cuerpo = str_replace("xtipo",$datos[0]["tip_nom"],$cuerpo);
+        $cuerpo = str_replace("xcant",$datos[0]["cant"],$cuerpo);
+
+
+
+        $this->Body = $cuerpo;
+        $this->AltBody = strip_tags("Enviar Registro");
+
+        try{
+            $this->send();
+            return true;
+        }catch(Exception $e){
+            return false;
+        }
+    }
+
 }
 
 
