@@ -3,11 +3,6 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-if(!isset($SESSION["usu_id"])){
-    header("Location: http://localhost/MesaDePartes_Enchis/index.php");
-    exit();
-
-}
 
 // Resto del código para registrar el trámite
 require_once("../config/conexion.php");
