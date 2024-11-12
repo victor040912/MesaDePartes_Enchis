@@ -50,7 +50,12 @@ function init(){
 }
 
 function guardar(e){
+    
     e.preventDefault();
+
+    $('#btnguardar').prop("disabled",true);
+    $('#btnguardar').html('<i class="bx bx-hourglass bx-spin font-size-16 align-middle me-2"></i>Espere...');
+
     var formData = new FormData($("#documento_form")[0]);
 
     var totalfiles = arrDocument.length;
@@ -74,10 +79,13 @@ function guardar(e){
 
             Swal.fire({
                 title: "Mesa de Partes",
-                html: "Su tramite a sido registrado con exito con Nro: "+ data + "",
+                html: "Su tramite a sido registrado con exito con Nro: <br><strong>"+ data + "</strong>",
                 icon: "success",
                 confirmButtonColor: "#5156be",
             });
+
+            $('#btnguardar').prop("disabled",false);
+            $('#btnguardar').html('Guardar')
         }
     })
 }

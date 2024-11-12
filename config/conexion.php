@@ -1,6 +1,8 @@
 <?php
 /* TODO:Inicia la session (si no esta iniciada) */
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 
 /* TODO: Definición de la clase Conectar */
