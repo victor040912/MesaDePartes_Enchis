@@ -53,10 +53,36 @@ if (isset($_GET["op"])) {
                         move_uploaded_file($nombreTemporal, $destino);
                     }
                 } 
-            break;
+                break;
             }
+            
+            case "listarusuario":
+                $datos=$documento->get_documento_x_usu($_SESSION["usu_id"]);
+                $data = Array();
+                foreach($datos as $row){
+                    $sub_array = array();
+                    $sub_array[]= $row["nrotramite"];
+                    $sub_array[]= $row["area_nom"];
+                    $sub_array[]= $row["tra_nom"];
+                    $sub_array[]= $row["doc_externo"];
+                    $sub_array[]= $row["tip_nom"];
+                    $sub_array[]= $row["doc_dni"];
+                    $sub_array[]= $row["doc_nom"];
+                    $sub_array[]= '<button type="button" onClick="ver('.$row["doc_id"].')"></button>';
+                    $data[]=$sub_array;
+            }
+            $results = array(
+                "sEcho"=>1,
+                "iTotalRecords"=>count($data),
+                "iTotalDisplayRecords"=>count($data),
+                "aaData"=>$data);
+            echo json_encode($results);  
+            
+            break;
+
         default:
             echo "Error: Operación no válida.";
+
     }
 } else {
     echo "Error: Operación no especificada.";

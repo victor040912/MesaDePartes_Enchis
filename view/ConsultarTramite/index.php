@@ -56,7 +56,6 @@
                                                             <th>Tipo</th>
                                                             <th>Doc.</th>
                                                             <th>Nombre.</th>
-                                                            <th>Estado</th>
                                                             <th></th>
                                                         </tr>
                                                     </thead>
