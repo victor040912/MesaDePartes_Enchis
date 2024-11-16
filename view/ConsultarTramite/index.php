@@ -18,13 +18,13 @@
 
             <div class="main-content">
 
-                <div class="page-content">
+            <div class="page-content">
                     <div class="container-fluid">
 
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                    <h4 class="mb-sm-0 font-size-18">Inicio</h4>
+                                    <h4 class="mb-sm-0 font-size-18">Consultar Tramite</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
@@ -35,38 +35,50 @@
 
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4 class="card-title">Ingrese toda la informacion requerida</h4>
-                                        <p class="card-title-desc"> (*) Datos Obligatorios </p> </p>
-                                    </div>
-
-                                    <div class="card-body">
-                                        <div class="row">
-                                        <div class="col-lg-4 col-md-6">
-                                                    <div class="mb-3">
-                                                        <label for="choices-single-default" class="form-label font-size-13 text-muted">Default</label>
-                                                        <select class="form-control" data-trigger="" name="choices-single-default" id="choices-single-default" placeholder="This is a search placeholder">
-                                                            <option value="">This is a placeholder</option>
-                                                            <option value="Choice 1">Choice 1</option>
-                                                            <option value="Choice 2">Choice 2</option>
-                                                            <option value="Choice 3">Choice 3</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4 class="card-title">Listado de Tramites.</h4>
+                                            <p class="card-title-desc">(*) Datos obligatorios. </p>
                                         </div>
+
+                                        <div class="card-body">
+
+                                                <table id="listado_table" class="table table-bordered dt-responsive  nowrap w-100">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Nro.Tramite</th>
+                                                            <th>Area</th>
+                                                            <th>Tramite</th>
+                                                            <th>Doc.Externo</th>
+                                                            <th>Tipo</th>
+                                                            <th>Doc.</th>
+                                                            <th>Nombre.</th>
+                                                            <th>Estado</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <tbody>
+
+                                                    </tbody>
+                                                </table>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
 
                     </div>
                 </div>
-
-                <?php require_once("../html/footer.php")?>
-
             </div>
 
+                <?php require_once("../html/footer.php")?>
         </div>
 
         <?php require_once("../html/sidebar.php")?>
