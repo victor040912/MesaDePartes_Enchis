@@ -3,7 +3,8 @@
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description">
         <meta content="Themesbrand" name="author">
 
-        
+        <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+
         <!-- DataTables -->
         <link href="../../assets/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
         <link href="../../assets/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
